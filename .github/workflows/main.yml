@@ -28,7 +28,6 @@ jobs:
           script: |
             mkdir /home/ubuntu/strapi
             cd /home/ubuntu/strapi
-            git clone https://github.com/raviiai/Strapi-project-Deployment.git
-            cd Strapi*
+            git pull origin master
             npm install
             npm run start
