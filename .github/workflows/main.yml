@@ -26,6 +26,9 @@ jobs:
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /home/ubuntu/strapi-project
+            mkdir /home/ubuntu/strapi
+            cd /home/ubuntu/strapi
+            git pull https://github.com/raviiai/Strapi-project-Deployment.git
             npm install
             npm run build
+            npm run develop
